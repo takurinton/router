@@ -2,9 +2,9 @@
   "name": "router",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "", 
+    "build": "node build.js production",
+    "build:development": "node build.js development",
     "dev": ""
   },
   "repository": {
@@ -16,5 +16,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/takurinton/router/issues"
+  },
+  "dependencies": {
+    "esbuild": "^0.8.54",
+    "preact": "^10.5.12"
   }
 }
