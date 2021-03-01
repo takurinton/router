@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "node build.js production",
-    "build:development": "node build.js development",
+    "build": "node build.js",
     "dev": ""
   },
   "repository": {
