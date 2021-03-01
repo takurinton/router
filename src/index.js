@@ -97,42 +97,6 @@ const initEventListeners = () => {
 	eventListenersInit = true;
 }
 
-export const _Router = (props) => {
-	const [state, setState] = useState({})
-	const [customHistory, setCustomHistory] = useState('');
-
-	const initial = () => {
-		setCustomHistory(props.history);
-		setState({url: props.url || getCurrentUrl()});
-		initEventListeners();
-	}
-
-	useEffect(() => {
-		initial();
-	}, [])
-
-	const url = window.location.pathname;
-	const children = props;
-	let onChange;
-
-	let active = this.getMatchingChildren(toChildArray(children), url, true);
-	let current = active[0] || null;
-	let previous = previousUrl;
-	if (url !== previous) {
-		previousUrl = url;
-		if (typeof onChange === 'function') {
-			onChange({
-				router: props,
-				url,
-				previous,
-				active,
-				current
-			});
-		}
-	}
-	return current;
-}
-
 export class Router extends Component {
 	constructor(props) {
 		super(props);
