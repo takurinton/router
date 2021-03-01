@@ -1,7 +1,7 @@
 const path = require('path');
 
 const config = {
-  entryPoints: ['src/index.js', 'src/prefetch.jsx'],
+  entryPoints: ['src/index.js', 'src/prefetch.jsx', 'src/util.js'],
   platform: 'browser',
   bundle: true,
   format: 'esm',
